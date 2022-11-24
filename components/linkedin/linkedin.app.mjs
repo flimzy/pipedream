@@ -115,6 +115,13 @@ export default {
             },
           },
         ];
+      } else if (originalUrl) {
+        data.specificContent["com.linkedin.ugc.ShareContent"].media = [
+          {
+            originalUrl: originalUrl,
+            status: "READY",
+          },
+        ];
       }
 
       return this._makeRequest({
